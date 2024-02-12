@@ -1,0 +1,10 @@
+spcloud:
+  cassandra:
+    keyspace:
+      name: accounts
+    port: 9042
+    contact:
+      point: localhost
+
+
+

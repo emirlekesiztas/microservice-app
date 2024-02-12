@@ -10,28 +10,19 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 @EnableCassandraRepositories
 public class CassandraConfiguration extends AbstractCassandraConfiguration {
 
-    @Value("${spcloud.cassandra.keyspace.name}")
-    private String keySpaceName;
-
-    @Value("${spcloud.cassandra.port}")
-    private int port;
-
-    @Value("${spcloud.cassandra.contact.point}")
-    private String contactPoint;
-
     @Override
     protected String getKeyspaceName() {
-        return keySpaceName;
+        return "accounts";
     }
 
     @Override
     protected int getPort() {
-        return port;
+        return 9042;
     }
 
     @Override
     protected String getContactPoints() {
-        return contactPoint;
+        return "localhost";
     }
 
     @Override
